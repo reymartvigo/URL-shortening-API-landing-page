@@ -3,7 +3,7 @@ import React from 'react'
 const MenuBar = () => {
 
     return (
-        <div className="sm:flex sm:flex-col sm:gap-5 sm:bg-darkviolet sm:px-5 sm:py-10 sm:items-center w-11/12 rounded-xl text-white absolute top-24 left-1/2 right-1/2 -translate-x-1/2 ">
+        <div className="sm:flex sm:flex-col sm:gap-5 sm:bg-darkviolet sm:px-5 sm:py-10 sm:items-center w-11/12 rounded-xl text-white absolute top-24 left-1/2 right-1/2 -translate-x-1/2 z-20">
             <ul className="sm:items-center sm:flex sm:flex-col sm:gap-8 sm:font-bold sm:text-lg">
                 <li className='w-fit cursor-pointer'>Features</li>
                 <li className='w-fit cursor-pointer'>Pricing</li>
