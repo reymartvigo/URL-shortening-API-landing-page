@@ -5,16 +5,10 @@ import MenuBar from './components/MenuBar'
 import HeroSection from './components/HeroSection'
 import LinkShortener from './components/LinkShortener'
 import AdvantageSection from './components/AdvantageSection'
+import Footer from './components/Footer';
 function App() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [link, setLink] = useState('')
-  const [isSubmit, setIsSubmit] = useState(false)
-
-  const handleChange = (e) => {
-    setLink(e.target.value)
-    console.log(e.target.value)
-  }
 
   const handleMenuOpen = () => {
     setIsMenuOpen((prevState) => !prevState)
@@ -36,8 +30,7 @@ function App() {
         <div className="w-full h-full sm:flex sm:items-center sm:justify-center sm: flex-col sm:gap-6 bg-neutralgray2 sm:mt-40 pb-20">
 
           <LinkShortener
-            link={link}
-            handleLink={handleChange}
+
           />
 
 
@@ -49,6 +42,7 @@ function App() {
           <button className="font-bold text-lg px-8 py-2 rounded-full outline-none cursor-pointer bg-cyan">Get Started</button>
         </div>
 
+        <Footer />
       </div>
     </>
   )

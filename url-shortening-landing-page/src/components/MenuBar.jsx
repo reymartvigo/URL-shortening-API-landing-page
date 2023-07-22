@@ -11,8 +11,8 @@ const MenuBar = () => {
             </ul>
 
             <div className="sm:flex sm:flex-col sm:gap-3 w-full border-t-2 sm:border-grayishviolet sm:pt-6 sm:text-lg">
-                <button className='w-full py-3 font-bold outline-none cursor-pointer'>Login</button>
-                <button className="bg-cyan w-full py-3 rounded-full font-bold outline-none cursor-pointer">Sign Up</button>
+                <button className='w-full py-3 font-bold outline-none cursor-pointer' aria-label="login">Login</button>
+                <button className="bg-cyan w-full py-3 rounded-full font-bold outline-none cursor-pointer" aria-label="sign-up">Sign Up</button>
             </div>
         </div>
     )
