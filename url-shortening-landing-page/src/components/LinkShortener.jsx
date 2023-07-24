@@ -73,8 +73,8 @@ const LinkShortener = () => {
         <>
             <div className="sm:w-11/12 bg-darkviolet rounded-xl sm:-mt-20 bg relative z-10 ">
                 <div className="absolute w-full sm:h-full z-0 ">
-                    <img className="absolute right-0 h-full lg:hidden rounded-xl" src={background1}></img>
-                    <img className="absolute right-0 h-full sm:hidden rounded-xl lg:flex lg:w-full" src={background2}></img>
+                    <img className="absolute right-0 h-full lg:hidden rounded-xl" alt="" src={background1}></img>
+                    <img className="absolute right-0 h-full sm:hidden rounded-xl lg:flex lg:w-full" alt="" src={background2}></img>
                 </div>
                 <form onSubmit={handleSubmit} action="" className="sm:flex sm:flex-col sm: gap-4 sm:px-6 sm:py-6 relative z-10 lg:flex-row lg:items-start lg:py-10 lg:px-10" id="form">
                     <div className="sm:w-full">
