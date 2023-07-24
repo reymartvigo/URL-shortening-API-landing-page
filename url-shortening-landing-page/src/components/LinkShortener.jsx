@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ShortenedLink from './ShortenedLink'
 
 
@@ -10,11 +10,23 @@ const LinkShortener = () => {
     const [error, setError] = useState(false);
     const [shortenedLinks, setShortenedLinks] = useState([])
 
+    const saveToLocalStorage = (links) => {
+        localStorage.setItem('shortenedLinks', JSON.stringify(links));
+    }
+
+    const getFromLocalStorage = () => {
+        const savedLinks = localStorage.getItem('shortenedLinks')
+        return savedLinks ? JSON.parse(savedLinks) : []
+    }
+
+    useEffect(() => {
+        const storedLinks = getFromLocalStorage()
+        setShortenedLinks(storedLinks)
+    }, [])
     const handleChange = (e) => {
         const value = e.target.value
         setLink(value)
         setError(false)
-
     }
 
     const handleSubmit = async (e) => {
@@ -39,16 +51,20 @@ const LinkShortener = () => {
 
                 setShortenedLinks((prevShortenedLink) => [...prevShortenedLink, newShortenedLink]);
                 setLink('')
-
+                saveToLocalStorage([...shortenedLinks, newShortenedLink])
             } else {
                 setError(true);
 
-            }
+            };
+
+
         } catch (error) {
             setError(true);
 
         }
     }
+
+
 
 
 
